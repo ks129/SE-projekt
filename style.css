@@ -88,3 +88,84 @@ a:focus-visible {
 .good-ux button:disabled {
   cursor: not-allowed;
 }
+
+
+/* SEKTSIOON: HALB UX */
+button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+button:active {
+    transform: scale(0.95);
+}
+.bad-ux-salvesta {
+  background-color:brown;
+  color:white;
+}
+.bad-ux-tühista {
+  background-color:blue;
+  color:white;
+}
+.bad-ux-kustuta {
+  background-color:green;
+  color:white;
+}
+.kast {
+    background-color: #bfbfbf;
+    color: #b5b5b5;
+    padding: 1.25rem;
+    width: 80%;
+    border-radius: 0.5rem;
+}
+.popup {
+    display: none;
+    position: fixed;
+    width: 30%;
+    min-width: 17.5rem;
+    max-width: 37.5rem;
+    padding: 1rem;
+    background-color: white;
+    border: 0.125rem solid black;
+    border-radius: 0.5rem;
+    box-shadow: 0.2rem 0.2rem 1rem gray;
+}
+
+.vasak {
+    top: 25%;
+    left: 20%;
+}
+
+.keskmine {
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.parem {
+    top: 20%;
+    right: 20%;
+}
+
+.sulge {
+    float: right;
+    background: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+label,
+input {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.saada {
+  background-color: green;
+  color: white;
+  margin-left: 50rem;
+  margin-top: 0.5rem;
+}

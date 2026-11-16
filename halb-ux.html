@@ -7,24 +7,116 @@
 <title>Halb UX</title>
 </head>
 <body>
+      <header class="site-header">
+    <h1>Kasutajakogemuse (UX) põhitõed</h1>
+    <nav aria-label="Peamenüü">
+      <ul>
+        <li><a href="index.html">Pealeht</a></li>
+        <li><a href="halb-ux.html">Halb UX</a></li>
+        <li><a href="hea-ux.html">Hea UX</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<h1>Halb UX</h1>
-<p>See lehekülg on näide halvast kasutajakogemusest. Siin on leitavad näited sellest, kuidas ei tohiks veebilehte disainida.</p>
+
+<h2>See lehekülg on näide halvast kasutajakogemusest. Siin on leitavad näited sellest, kuidas ei tohiks veebilehte disainida.</h2>
 
 <main>
-    <h2>1. Keelatud tegevus - Segased nupud</h2>
-    <button>Salvesta</button>
-    <button>Tühista</button>
-    <button>Kustuta</button>
-    <p>Halvasti disainitud nupud viivad kasutajat segadusse. Nuppude värvid ja tähendused on eksitavad.</p>
-    <br>
-    <h2>2. Keelatud tegevus - Halb värvikontrast</h2>
+<h2>1. Keelatud tegevus - Halb värvikontrast</h2>
+    <p>Halb värvikontrast tekitab raskusi teksti lugemisel. </p>
+    <div class="kast">
+        Halvasti loetav tekst
+    </div>
+    <p>Lahendus: Kasuta kontrastsemaid värve, et tekst oleks paremini loetav.</p>
+<br>
 
-    <p>Halb värvikontrast tekitab raskusi teksti lugemisel.</p>
-    <p>Lahendus: Kasuta värvikontrasti, et tekst oleks paremini loetav.</p>
-    <br>
-    <h2>3. Keelatud tegevus - Liiga palju hüpikaknaid/reklaame</h2>
-    <img src ="https://triggerbee.com/wp-content/uploads/tbimages/2020/04/pop_up_ads.jpg" alt="Liiga palju hüpikaknaid"
+
+
+<h2>2. Keelatud tegevus - Liiga palju hüpikaknaid/reklaame</h2>
+<p>Üks nupp avab mitmeid hüpikaknaid. Kasutajale antakse liiga palju infot korraga.</p>
+<button onclick="avaPopupid()">Vajuta siia!</button>
+
+<div id="popup1" class="popup vasak">
+    <button class="sulge" onclick="sulgePopup('popup1')">×</button>
+    <h3>Liitu uudiskirjaga!</h3>
+    <p>Saa viimased uudised oma e-postile.</p>
+</div>
+
+<div id="popup2" class="popup keskmine">
+    <button class="sulge" onclick="sulgePopup('popup2')">×</button>
+    <h3>Tähelepanu!</h3>
+    <p>See veebileht kasutab küpsiseid.</p>
+</div>
+
+<div id="popup3" class="popup parem">
+    <button class="sulge" onclick="sulgePopup('popup3')">×</button>
+    <h3>Eripakkumine!</h3>
+    <p>50% soodustus ainult täna.</p>
+    <p>Sooduskood: "5050"</p>
+</div>
+<br>
+
+<script>
+function avaPopupid() {
+    document.getElementById("popup1").style.display = "block";
+    document.getElementById("popup2").style.display = "block";
+    document.getElementById("popup3").style.display = "block";
+}
+function sulgePopup(id) {
+    document.getElementById(id).style.display = "none";
+}
+function avaVeateade() {
+    document.getElementById("popup4").style.display = "block";
+}
+</script>
+
+
+
+<h2>3. Keelatud tegevus - Ebaselged väljade nimetused</h2>
+<p>Kasutajad ei saa aru mida neilt oodatakse, kui väljade nimetused pole arusaadavad.</p>
+<label>X1:</label>
+<input type="text">
+
+<label>Sisesta info:</label>
+<input type="text">
+
+
+
+<h2>4. Keelatud tegevus - Segased nupud</h2>
+<p>Halvasti disainitud nupud viivad kasutajat segadusse. Nuppude värvid ja tähendused on eksitavad.</p>
+<button class="bad-ux-salvesta">Salvesta</button>
+<button class="bad-ux-tühista">Tühista</button>
+<button class="bad-ux-kustuta">Kustuta</button>
+<p>Punane värv seostub kustutamisega, roheline tavaliselt salvestamisega.</p>
+<br>
+
+<h2>5. Keelatud tegevus - Nupp paigutatud ebaloogiliselt</h2>
+<p>Siin näites on kontaktivorm, kus ärasaatmise nupp on paigutatud kontaktivormist kaugele. Peale vormi täitmist peab kasutaja hakkama nuppu otsima.</p>
+<button class="saada">Saada</button>
+<label>Eesnimi:</label>
+<input type="text">
+
+<label>Perekonnanimi:</label>
+<input type="text">
+
+<label>Vanus:</label>
+<input type="text">
+
+<label>Telefoninumber:</label>
+<input type="text">
+
+
+<h2>6. Keelatud tegevus - Arusaamatud veateated</h2>
+<p>Võib juhtuda, et vormi täitmise käigus tekivad vead.</p>
+<p>Veateated peaksid olema selged ja kasutajale abiks. Selles näites puudub selgitus, mida tehti valesti või kuidas probleemi lahendada.</p>
+
+<button onclick="avaVeateade()">Näide kehvast veateatest</button>
+<div id="popup4" class="popup keskmine">
+    <button class="sulge" onclick="sulgePopup('popup4')">×</button>
+    <h3>Veateade 32498</h3>
+    <p>Operatsioon ebaõnnestus.</p>
+</div>
+
 </main>
 </body>
 </html>

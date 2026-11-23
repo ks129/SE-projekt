@@ -19,9 +19,23 @@
   </header>
 
   <main class="good-ux">
-    <h2>Siia tuleb näide heast kasutajakogemusest.</h2>
-    <button disabled>Keelatud tegevus</button>
-    <input type="text" >
+    <div class="contact">
+      <h2>Võta meiega ühendust</h2>
+      <!-- TODO: Lisa mingisugune pilt -->
+
+      <form action="/cgi-bin/contact.py" method="POST">
+        <label for="name">Nimi</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">E-maili aadress</label>
+        <input type="email" id="email" name="email" required>
+        <label for="subject">Teema</label>
+        <input type="text" id="subject" name="subject">
+        <label for="content">Sisu</label>
+        <textarea id="content" name="content" required></textarea>
+        
+        <button type="submit">Saada</button>
+      </form>
+    </div>
   </main>
 </body>
 </html>

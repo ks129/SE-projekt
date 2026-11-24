@@ -89,6 +89,53 @@ a:focus-visible {
   cursor: not-allowed;
 }
 
+.good-ux .contact label {
+  font-size: 14px;
+  color: #1a1a1a;
+}
+
+.good-ux .contact label:has(+ input[required])::after,
+.good-ux .contact label:has(+ textarea[required])::after {
+  content: " *";
+  color: red;
+  display: inline;
+}
+
+.good-ux .contact input, .good-ux .contact textarea {
+  padding: 11px 14px;
+  font-size: 15px;
+  border: 1px solid #d4d4d4;
+  border-radius: 10px;
+  background: #fff;
+  transition: border-color 120ms, box-shadow 120ms;
+  width: 100%;
+}
+
+.good-ux .contact .buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  height: 3rem;
+}
+
+.good-ux .contact .buttons .clear {
+  background-color: #505050;
+  color: white;
+}
+
+.good-ux .contact .buttons .clear:hover {
+  background-color: #585858;
+}
+
+.good-ux .contact .buttons .submit {
+  background-color: var(--color-primary-dark);
+  color: white;
+  width: 10rem;
+}
+
+.good-ux .contact .buttons .submit:hover {
+  background-color: var(--color-primary);
+}
 
 /* SEKTSIOON: HALB UX */
 button {
